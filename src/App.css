@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.App li,
+.App img {
+  height: 80px;
+}
+
+.App li {
+  position: relative;
+  margin: 5px auto 5px auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex: 1;
+}
+
+.App li,
+input {
+  width: 100%;
+  max-width: 600px;
+}
+
+input {
+  font-size: 2em;
+}
+
+.name {
+  flex-grow: 1;
+  line-height: 80px;
+  font-size: 1.5em;
+}
+
+.button {
+  line-height: 80px;
+  font-size: 3em;
+}
+
+.confirmation {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffefd5;
+  color: black;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.confirmation > * {
+  flex: 1;
+}
+
+.not-clicky {
+  opacity: 0.3;
+}
