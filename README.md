@@ -9,6 +9,7 @@ To get the list of attendees;
 ```javascript
 JSON.stringify(Array.from(document.querySelectorAll('.D_tabular tr[id^=member]')).map(element => ({avatar: element.querySelector('img').src, firstName: element.querySelector('.D_name').innerText.trim(), lastName: '', arrived: false})))
 ```
+- Import that JSON into firebase at the root level.
 
 ---
 
