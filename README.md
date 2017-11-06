@@ -9,6 +9,10 @@ To get the list of attendees;
 ```javascript
 JSON.stringify(Array.from(document.querySelectorAll('.D_tabular tr[id^=member]')).map(element => ({avatar: element.querySelector('img').src, firstName: element.querySelector('.D_name').innerText.trim(), lastName: '', arrived: false})))
 ```
+  - Or, for the new design, run this code:
+  ```javascript
+  JSON.stringify(Array.from(document.querySelectorAll('.attendee-item')).map(element => ({avatar: (element.querySelector('.avatar').currentStyle || window.getComputedStyle(element.querySelector('.avatar'), false)).backgroundImage.slice(4, -1).replace(/"/g, ""), firstName: element.querySelector('a[href*="/members/"]').innerText.trim(), lastName: '', arrived: false})));
+  ```
 - Import that JSON into firebase at the root level.
 
 ---
